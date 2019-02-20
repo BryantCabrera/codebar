@@ -49,9 +49,19 @@ class Workshop():
             self.instructors.append(person)
 
     def print_details(self):
-        print(f"Workshop - {self.date} - {self.subject}\nStudents")
+        self.print_workshop_details()
+        self.print_students()
+        self.print_instructors()
+        
+    def print_workshop_details(self):
+        print(f"Workshop - {self.date} - {self.subject}\n")
+    
+    def print_students(self):
+        print('Students\n')
         for index, student in enumerate(self.students):
             print(f"{index + 1}. {student.full_name}")
+
+    def print_instructors(self):
         print('\n Instructors')
         for index, instructor in enumerate(self.instructors):
             print(f"{index + 1}. {instructor.full_name}")
